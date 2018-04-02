@@ -14,8 +14,9 @@ def loop():
     df = pd.DataFrame(
         r.json(),
         columns=[
-            'stockNo', 'name', 'change2', 'change2Percentage', 'last', 'open',
-            'high', 'low', 'totalVolume', 'weekChange'
+            'stockNo', 'name', 'change2', 'change2Percentage', 'deal', 'open',
+            'high', 'low', 'last',
+            'totalVolume', 'weekChange'
         ])
     df = df.set_index('stockNo')
     show(df)
